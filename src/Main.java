@@ -1,25 +1,22 @@
 public class Main {
     public static void main(String[] args){
 
-        // trying out dynamic array features
+        // trying out double ended queue
 
-        DynamicArray da = new DynamicArray(5);
-        System.out.println("capacity " + da.getCapacity());
+        DoubleEndedQueue de = new DoubleEndedQueue();
 
-        da.set(5,32);
-        da.set(0, 99);
-        da.set(0,32);
-        da.set(3,33);
+        de.addFirst(5);
+        de.addFirst(56);
+        de.addLast(123);
 
-        da.pushback(34);
+        System.out.println( de.peekFirst());
+        System.out.println( de.peekLast());
 
-        da.getAll();
+        System.out.println( de.pollFirst());
+        System.out.println( de.pollLast());
 
-        da.popback();
-
-        System.out.println("size " + da.getSize());
-        System.out.println("capacity " + da.getCapacity());
-
+        System.out.println( de.peekFirst());
+        System.out.println( de.peekLast());
 
     }
 }
