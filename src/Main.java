@@ -1,19 +1,25 @@
 public class Main {
     public static void main(String[] args){
 
-        // trying out linked list features
+        // trying out dynamic array features
 
-        SinglyLinkedList sl = new SinglyLinkedList();
-        sl.insertHead(1);
-        sl.insertTail(2);
-        sl.insertHead(0);
+        DynamicArray da = new DynamicArray(5);
+        System.out.println("capacity " + da.getCapacity());
 
-        sl.remove(1);
+        da.set(5,32);
+        da.set(0, 99);
+        da.set(0,32);
+        da.set(3,33);
 
-        System.out.println(sl.get(0));
+        da.pushback(34);
 
+        da.getAll();
 
-        System.out.println(sl.getValues());
+        da.popback();
+
+        System.out.println("size " + da.getSize());
+        System.out.println("capacity " + da.getCapacity());
+
 
     }
 }
