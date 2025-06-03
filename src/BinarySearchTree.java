@@ -1,4 +1,3 @@
-import com.sun.source.tree.Tree;
 
 class TreeNode{
     int item;
@@ -8,11 +7,7 @@ class TreeNode{
         this.item = item;
         this.left = this.right = null;
     }
-    TreeNode(int item, TreeNode left, TreeNode right){
-        this.item = item;
-        this.left = left;
-        this.right = right;
-    }
+
 }
 
 public class BinarySearchTree {
@@ -21,8 +16,6 @@ public class BinarySearchTree {
     BinarySearchTree(int item){
         this.root = new TreeNode(item);
     }
-
-    BinarySearchTree(){    }
 
     public void insert(int item){
         if (root == null){
@@ -153,9 +146,6 @@ public class BinarySearchTree {
     }
 
     private int heightHelper(TreeNode root){
-
-        int right = 0;
-        int left = 0;
 
         if (root == null) return -1;
 
