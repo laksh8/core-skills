@@ -1,22 +1,23 @@
 public class Main {
     public static void main(String[] args){
 
-        // trying out double ended queue
+        // trying out binary search tree
 
-        DoubleEndedQueue de = new DoubleEndedQueue();
+        BinarySearchTree bst = new BinarySearchTree(5);
 
-        de.addFirst(5);
-        de.addFirst(56);
-        de.addLast(123);
+        bst.insert(3);
+        bst.insert(17);
+        bst.insert(4);
+        bst.insert(12);
 
-        System.out.println( de.peekFirst());
-        System.out.println( de.peekLast());
+        bst.delete(5);
 
-        System.out.println( de.pollFirst());
-        System.out.println( de.pollLast());
+        System.out.println(bst.search(5));
+        System.out.println(bst.search(12));
 
-        System.out.println( de.peekFirst());
-        System.out.println( de.peekLast());
+        System.out.println("Height: " +  bst.height());
+
+        bst.printInorderTraversal();
 
     }
 }
