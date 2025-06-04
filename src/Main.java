@@ -1,23 +1,43 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        // trying out binary search tree
+        // trying out hash map
 
-        BinarySearchTree bst = new BinarySearchTree(5);
+        HashedMap hm = new HashedMap(10);
 
-        bst.insert(3);
-        bst.insert(17);
-        bst.insert(4);
-        bst.insert(12);
+        hm.insert(5, 234);
+        hm.insert(15, 233);
 
-        bst.delete(5);
+        hm.insert(5, 123);
+        hm.insert(15, 234);
 
-        System.out.println(bst.search(5));
-        System.out.println(bst.search(12));
+        System.out.println("Size: "+ hm.getSize());
+        System.out.println("Arr Length: "+ hm.getArrLength());
+        System.out.println("Load Factor: "+ (float)hm.getSize()/hm.getArrLength());
 
-        System.out.println("Height: " +  bst.height());
+        for (int i = 0; i < 7; i++){
+            hm.insert(i, 45);
+        }
 
-        bst.printInorderTraversal();
+        System.out.println("Size: "+ hm.getSize());
+        System.out.println("Arr Length: "+ hm.getArrLength());
+        System.out.println("Load Factor: "+ (float)hm.getSize()/hm.getArrLength());
+
+        hm.displayMap();
+
+        hm.insert(45, 32);
+
+        System.out.println("Size: "+ hm.getSize());
+        System.out.println("Arr Length: "+ hm.getArrLength());
+        System.out.println("Load Factor: "+ (float)hm.getSize()/hm.getArrLength());
+
+        hm.displayMap();
+
+        hm.remove(15);
+        hm.remove(14);
+
+        System.out.println(hm.get(5));
+        System.out.println(hm.get(4));
 
     }
 }
